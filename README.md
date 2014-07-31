@@ -1,6 +1,6 @@
 # TwitterPic
 
-Post pictures into Twitter easily.
+Update your twitter profile pic with base64 image
 
 ## Installing
 
