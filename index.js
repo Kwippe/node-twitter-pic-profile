@@ -2,11 +2,11 @@
 
 var request = require('request');
 
-var TwitterPic = function (auth) {
+var TwitterPicProfile = function (auth) {
     this._auth = auth;
 };
 
-TwitterPic.prototype.update = function (params, callback) {
+TwitterPicProfile.prototype.update = function (params, callback) {
     var form, req, value, key;
 
 //    req = request.post('https://api.twitter.com/1.1/statuses/update_with_media.json', {
@@ -48,7 +48,7 @@ TwitterPic.prototype.update = function (params, callback) {
     }
 };
 
-module.exports = TwitterPic;
+module.exports = TwitterPicProfile;
 
 // example error:
 
