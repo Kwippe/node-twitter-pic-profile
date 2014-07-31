@@ -20,6 +20,7 @@ var t = new TwitterPicProfile({
     token_secret:    'z'
 });
 
+// you'll need to already have the img variable defined as a base64 string. In my case, I send this via socket.io from Backbone to Node.js, then send to Twitter in the callback fn which has the img data
 
 // details about the params below can be found in
 // https://api.twitter.com/1/account/update_profile_background_image.json
