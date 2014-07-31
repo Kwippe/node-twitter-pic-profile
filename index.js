@@ -9,7 +9,8 @@ var TwitterPic = function (auth) {
 TwitterPic.prototype.update = function (params, callback) {
     var form, req, value, key;
 
-    req = request.post('https://api.twitter.com/1.1/statuses/update_with_media.json', {
+//    req = request.post('https://api.twitter.com/1.1/statuses/update_with_media.json', {
+    req = request.post('https://api.twitter.com/1/account/update_profile_background_image.json', {
         oauth: this._auth
     }, function (err, res, body) {
         var parsedBody = JSON.parse(body);
