@@ -8,13 +8,13 @@ var TwitterPicProfile = function (auth) {
 
 TwitterPicProfile.prototype.update = function (params, callback) {
     var form, req, value, key;
-
-//    req = request.post('https://api.twitter.com/1.1/statuses/update_with_media.json', {
-    req = request.post('https://api.twitter.com/1/account/update_profile_background_image.json', {
+//console.log('running TwitterPicProfile: parmas are '+params.description);
+    req = request.post('https://api.twitter.com/1.1/account/update_profile_image.json', {
         oauth: this._auth
     }, function (err, res, body) {
-        var parsedBody = JSON.parse(body);
 
+        var parsedBody = JSON.parse(body);
+     
         if (parsedBody.errors && parsedBody.errors[0] && parsedBody.errors[0].message) {
             return callback(parsedBody.errors[0].message, parsedBody);
         }
